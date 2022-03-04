@@ -23,7 +23,13 @@ Command line options : sqlcheck <options>
 
 commands:
 
+run on the database schema with delimiter as ,
+
 sqlcheck.exe  -delimiter , -f .\schemas\The-History-of-Baseball.sql -v   > .\SQLCheck-results\output_baseball_schema.txt
+
+with default delimiter ;
+
+sqlcheck.exe -f .\schemas\The-History-of-Baseball.sql -v   > .\SQLCheck-results\output_baseball_schema_sepBySemicolon.txt
 
 sqlcheck.exe -f .\queries\query4.sql -v   > .\SQLCheck-results\output_query4.txt
 
