@@ -21,7 +21,7 @@ Command line options : sqlcheck <options>
    -h -help               :  Print help message 
 
 
-commands:
+commands(under windows environment - SQLCheck tool can be found in https://github.com/jarulraj/sqlcheck):
 
 sqlcheck.exe  -delimiter , -f .\schemas\The-History-of-Baseball.sql -v   > .\SQLCheck-results\output_baseball_schema.txt
 
