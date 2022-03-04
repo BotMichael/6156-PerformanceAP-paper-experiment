@@ -1,0 +1,69 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: .\queries\query4.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: ENABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: select o_orderpriority, count(*) as order_count from orders where o_orderdate >=
+date '1994-08-01' and o_orderdate < date '1994-08-01' + interval '3' month and
+exists ( select * from lineitem where l_orderkey = o_orderkey and l_commitdate <
+l_receiptdate ) group by o_orderpriority order by o_orderpriority;
+[.\queries\query4.sql]: (HIGH RISK) (QUERY ANTI-PATTERN) SELECT *
+● Inefficiency in moving data to the consumer:
+When you SELECT *, you're often retrieving more columns from the database than
+your application really needs to function. This causes more data to move from
+the database server to the client, slowing access and increasing load on your
+machines, as well as taking more time to travel across the network. This is
+especially true when someone adds new columns to underlying tables that didn't
+exist and weren't needed when the original consumers coded their data access.
+
+
+● Indexing issues:
+Consider a scenario where you want to tune a query to a high level of
+performance. If you were to use *, and it returned more columns than you
+actually needed, the server would often have to perform more expensive methods
+to retrieve your data than it otherwise might. For example, you wouldn't be able
+to create an index which simply covered the columns in your SELECT list, and
+even if you did (including all columns [shudder]), the next guy who came around
+and added a column to the underlying table would cause the optimizer to ignore
+your optimized covering index, and you'd likely find that the performance of
+your query would drop substantially for no readily apparent reason.
+
+● Binding
+Problems:
+When you SELECT *, it's possible to retrieve two columns of the same name from
+two different tables. This can often crash your data consumer. Imagine a query
+that joins two tables, both of which contain a column called "ID". How would a
+consumer know which was which? SELECT * can also confuse views (at least in some
+versions SQL Server) when underlying table structures change -- the view is not
+rebuilt, and the data which comes back can be nonsense. And the worst part of it
+is that you can take care to name your columns whatever you want, but the next
+guy who comes along might have no way of knowing that he has to worry about
+adding a column which will collide with your already-developed names.
+[Matching Expression: select 			*]
+
+[.\queries\query4.sql]: (LOW RISK) (QUERY ANTI-PATTERN) GROUP BY Usage
+● Do not reference non-grouped columns:
+Every column in the select-list of a query must have a single value row per row
+group. This is called the Single-Value Rule. Columns named in the GROUP BY
+clause are guaranteed to be exactly one value per group, no matter how many rows
+the group matches. Most DBMSs report an error if you try to run any query that
+tries to return a column other than those columns named in the GROUP BY clause
+or as arguments to aggregate functions. Every expression in the select list must
+be contained in either an aggregate function or the GROUP BY clause. Follow the
+single-value rule to avoid ambiguous query results.
+[Matching Expression: group by]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 2
+>  High Risk   :: 1
+>  Medium Risk :: 0
+>  Low Risk    :: 1
+>  Hints       :: 0
