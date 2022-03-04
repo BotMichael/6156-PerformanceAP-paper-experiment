@@ -1,0 +1,1075 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: .\schemas\The-History-of-Baseball.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: ENABLED
+> DELIMITER     :: ,
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table all_star ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: game_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: g_pr numeric); .import "working/no_header/appearances.csv" appearances create
+table manager_award ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: award_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: notes numeric); .import "working/no_header/manager_award.csv" manager_award
+create table player_award ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: award_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: notes text); .import "working/no_header/player_award.csv" player_award create
+table manager_award_vote ( award_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: votes_first integer); .import "working/no_header/manager_award_vote.csv"
+manager_award_vote create table player_award_vote ( award_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: votes_first numeric); .import "working/no_header/player_award_vote.csv"
+player_award_vote create table batting ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: g_idp numeric); .import "working/no_header/batting_postseason.csv"
+batting_postseason create table player_college ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: college_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: year integer); .import "working/no_header/player_college.csv" player_college
+create table fielding ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: zr numeric); .import "working/no_header/fielding.csv" fielding create table
+fielding_outfield ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: grf numeric); .import "working/no_header/fielding_outfield.csv"
+fielding_outfield create table fielding_postseason ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: cs numeric); .import "working/no_header/fielding_postseason.csv"
+fielding_postseason create table hall_of_fame ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: park_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: attendance integer); .import "working/no_header/home_game.csv" home_game create
+table manager ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: plyr_mgr text); .import "working/no_header/manager.csv" manager create table
+manager_half ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: rank integer); .import "working/no_header/manager_half.csv" manager_half create
+table player ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: retro_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: bbref_id text); .import "working/no_header/player.csv" player create table park
+( park_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: country text); .import "working/no_header/park.csv" park create table pitching (
+player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: g_idp numeric); .import "working/no_header/pitching.csv" pitching create table
+pitching_postseason ( player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: player_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: salary integer); .import "working/no_header/salary.csv" salary create table
+college ( college_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: franchise_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: div_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id_retro text); .import "working/no_header/team.csv" team create table
+team_franchise ( franchise_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: league_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: team_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+-------------------------------------------------
+SQL Statement: div_id text,
+[.\schemas\The-History-of-Baseball.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+● Store each value in its own column and row:
+Storing a list of IDs as a VARCHAR/TEXT column can cause performance and data
+integrity problems. Querying against such a column would require using
+pattern-matching expressions. It is awkward and costly to join a comma-separated
+list to matching rows. This will make it harder to validate IDs. Think about
+what is the greatest number of entries this list must support? Instead of using
+a multi-valued attribute, consider storing it in a separate table, so that each
+individual value of that attribute occupies a separate row. Such an intersection
+table implements a many-to-many relationship between the two referenced tables.
+This will greatly simplify querying and validating the IDs.
+[Matching Expression: id text]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 65
+>  High Risk   :: 65
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
